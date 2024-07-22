@@ -7,7 +7,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure (Virtual Machines)
 - Remote Desktop
 - Active Directory Domain Services
 - PowerShell
@@ -15,7 +15,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 <h2>Operating Systems Used </h2>
 
 - Windows Server 2022
-- Windows 10 (21H2)
+- Windows 10
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
@@ -30,7 +30,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 - Use Windows PowerShell ISE to Create Users in Domain Cotroller
 
 <h2>Deployment and Configuration Steps</h2>
-
+<h3>Install Active Directory on Domain Controller</h3>
 <p>
 <img src="https://i.imgur.com/NQVuAWW.png" height="80%" width="80%" alt="Install Active Directory"/>
 </p>
@@ -38,7 +38,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Enable Active Directory on Domain Controller</h3>
 <p>
 <img src="https://i.imgur.com/7FRavH3.png" height="80%" width="80%" alt="Enable Active Directory"/>
 </p>
@@ -46,7 +46,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Connect Domain Controller to Client Computer</h3>
 <p>
 <img src="https://i.imgur.com/C7p88rE.png" height="80%" width="80%" alt="Connect DC to Client"/>
 </p>
@@ -54,7 +54,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Connect Client Computer to Domain Controller</h3>
 <p>
 <img src="https://i.imgur.com/OQo6n5v.png" height="80%" width="80%" alt="Connect Client to DC"/>
 </p>
@@ -62,7 +62,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Configure Users within Active Directory</h3>
 <p>
 <img src="https://i.imgur.com/p8f2WsI.png" height="80%" width="80%" alt="Config users in AD"/>
 </p>
@@ -70,7 +70,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Enable User Admin access within Active Directory</h3>
 <p>
 <img src="https://i.imgur.com/VLBKjyP.png" height="80%" width="80%" alt="Config User to an Admin"/>
 </p>
@@ -78,7 +78,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Configure Access to Multiple Users within Client Computer</h3>
 <p>
 <img src="https://i.imgur.com/Za6TGU8.png" height="80%" width="80%" alt="Config access to Multiple Users"/>
 </p>
@@ -86,7 +86,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Configure User Access within Domain Contoller</h3>
 <p>
 <img src="https://i.imgur.com/DWPyk22.png" height="80%" width="80%" alt="Config User access within DC"/>
 </p>
@@ -94,7 +94,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
-
+<h3>Use Windows PowerShell ISE to Create Users in Domain Cotroller</h3>
 <p>
 <img src="https://i.imgur.com/wSlXHn7.png" height="80%" width="80%" alt="Use Win PShell ISE to create Users"/>
 </p>
