@@ -82,6 +82,6 @@ Then to give multiple users access to Client-1 I first opened the remote desktop
 <img src="https://i.imgur.com/wSlXHn7.png" height="80%" width="80%" alt="Use Win PShell ISE to create Users"/>
 </p>
 <p>
-Then to create new users with Windows PowerShell ISE I created a new file with the script as seen in the picture above.
+Then to create new users with Windows PowerShell ISE I created a new file with the script seen in the picture above these accounts were then given access to the Domain Users group.
 </p>
 <br />
