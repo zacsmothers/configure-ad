@@ -23,10 +23,8 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 - Enable Active Directory on Domain Controller
 - Configure Users within Active Directory
 - Enable User Admin access within Active Directory
-- Connect Domain Controller to Client Computer
 - Connect Client Computer to Domain Controller
 - Configure Access to Multiple Users within Client Computer
-- Configure User Access within Domain Contoller
 - Use Windows PowerShell ISE to Create Users in Domain Cotroller
 
 <h2>Deployment and Configuration Steps</h2>
@@ -71,28 +69,12 @@ Although the user was created and placed in the admin organizational unit the ac
 I then added the Client-1 computer to the domain by first changing the DNS settings of Client-1 to the DC-1 computer's private IP address within the Azure portal then after the two VM's updated I changed the domain for Client-1 within the "Computer Name" section of the "System Properties" inside the Client-1 VM.
 </p>
 <br />
-<h3>Connect Domain Controller to Client Computer</h3>
-<p>
-<img src="https://i.imgur.com/C7p88rE.png" height="80%" width="80%" alt="Connect DC to Client"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
 <h3>Configure Access to Multiple Users within Client Computer</h3>
 <p>
 <img src="https://i.imgur.com/Za6TGU8.png" height="80%" width="80%" alt="Config access to Multiple Users"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-<h3>Configure User Access within Domain Contoller</h3>
-<p>
-<img src="https://i.imgur.com/DWPyk22.png" height="80%" width="80%" alt="Config User access within DC"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Then to give multiple users access to Client-1 I first opened the remote desktop settings within Client-1 and within the "Select Users or Groups" field I added Domain Users which gives access to any user within that security group. 
 </p>
 <br />
 <h3>Use Windows PowerShell ISE to Create Users in Domain Cotroller</h3>
@@ -100,6 +82,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/wSlXHn7.png" height="80%" width="80%" alt="Use Win PShell ISE to create Users"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Then to create new users with Windows PowerShell ISE I created a new file with the script as seen in the picture above.
 </p>
 <br />
