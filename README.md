@@ -9,7 +9,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - Microsoft Azure (Virtual Machines)
 - Remote Desktop
-- Active Directory Domain Services
+- Active Directory
 - PowerShell
 
 <h2>Operating Systems Used </h2>
@@ -21,10 +21,10 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 
 - Install Active Directory on Domain Controller
 - Enable Active Directory on Domain Controller
-- Connect Domain Controller to Client Computer
-- Connect Client Computer to Domain Controller
 - Configure Users within Active Directory
 - Enable User Admin access within Active Directory
+- Connect Domain Controller to Client Computer
+- Connect Client Computer to Domain Controller
 - Configure Access to Multiple Users within Client Computer
 - Configure User Access within Domain Contoller
 - Use Windows PowerShell ISE to Create Users in Domain Cotroller
@@ -35,7 +35,7 @@ This tutorial outlines the implementation of Active Directory within Azure Virtu
 <img src="https://i.imgur.com/NQVuAWW.png" height="80%" width="80%" alt="Install Active Directory"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+I Created two Virtual Machines within Microsoft Azure named DC-1 which is the domain controller using the Windows Server 2022 image and another named Client-1 which is the client computer connected to the domain controller using the Windows 10 image. Once the two VMs were set up I installed Microsoft Active Diretcory within the Server Manager on the domain controller.
 </p>
 <br />
 <h3>Enable Active Directory on Domain Controller</h3>
@@ -43,23 +43,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/7FRavH3.png" height="80%" width="80%" alt="Enable Active Directory"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-<h3>Connect Domain Controller to Client Computer</h3>
-<p>
-<img src="https://i.imgur.com/C7p88rE.png" height="80%" width="80%" alt="Connect DC to Client"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-<h3>Connect Client Computer to Domain Controller</h3>
-<p>
-<img src="https://i.imgur.com/OQo6n5v.png" height="80%" width="80%" alt="Connect Client to DC"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After the installation I continued to set up Active Directory on DC-1 by promoting the server to a domain controller within the Server Manager, then as the picture above shows I clicked
+add a new forest to give the domain a name and password.
 </p>
 <br />
 <h3>Configure Users within Active Directory</h3>
@@ -67,12 +52,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/p8f2WsI.png" height="80%" width="80%" alt="Config users in AD"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+After the installation completed I launched Active Directory and created two new organizational units named _ADMINS and _EMPLOYEES within the admin organizational unit I created a new user named John Doe which can be seen in the picture above.
 </p>
 <br />
 <h3>Enable User Admin access within Active Directory</h3>
 <p>
 <img src="https://i.imgur.com/VLBKjyP.png" height="80%" width="80%" alt="Config User to an Admin"/>
+</p>
+<p>
+Although the user was created and placed in the admin organizational unit the account did not have admin access, this was done by enabling "Domain Admins" access in the "Member Of" section within the account "Properties" which can be seen in the picture above.
+</p>
+<br />
+<h3>Connect Client Computer to Domain Controller</h3>
+<p>
+<img src="https://i.imgur.com/OQo6n5v.png" height="80%" width="80%" alt="Connect Client to DC"/>
+</p>
+<p>
+I then added the Client-1 computer to the domain by first changing the DNS settings of Client-1 to the DC-1 computer's private IP address within the Azure portal then after the two VM's updated I changed the domain for Client-1 within the "Computer Name" section of the "System Properties" inside the Client-1 VM.
+</p>
+<br />
+<h3>Connect Domain Controller to Client Computer</h3>
+<p>
+<img src="https://i.imgur.com/C7p88rE.png" height="80%" width="80%" alt="Connect DC to Client"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
